@@ -58,8 +58,8 @@
                         <div class="relative w-[46%] flex items-center">
                             <div class="absolute group z-10 flex w-full h-full items-center justify-end pr-14 ">
                                 <img src="/public/icon-folder-blue.svg" alt="" class="z-20 w-[424px] pb-8">
-                                <img src="/public/img-propeller-airplane.png" alt="" class="absolute z-30 -right-32 -top-38 transition delay-150 duration-600 group-hover:-translate-x-40 group-hover:-translate-y-8 group-hover:-rotate-10 soft-bounce">
-                                <div class="absolute z-20 group-hover:z-40 w-full left-36 bottom-2 leading-none transition delay-150 duration-600 group-hover:translate-x-12">
+                                <img src="/public/img-propeller-airplane.png" alt="" class="absolute z-30 -right-32 -top-38 transition duration-1000 group-hover:-translate-x-40 group-hover:-translate-y-8 group-hover:-rotate-10 soft-bounce">
+                                <div class="absolute z-20 group-hover:z-40 w-full left-36 bottom-2 leading-none transition duration-1000 group-hover:translate-x-12">
                                     <p class="text-white uppercase text-4xl font-medium">
                                         Guest &
                                         <br>
@@ -82,7 +82,7 @@
                         <div class="relative w-[46%] flex items-center">
                             <div class="absolute group z-10 flex w-full h-full items-center pl-14 ">
                                 <img src="/public/icon-folder-blue.svg" alt="" class="z-20 w-[424px] pb-8 transform scale-x-[-1]">
-                                <div class="absolute z-20 group-hover:z-40 w-[424px] left-20 top-1 leading-none transition-all delay-150 duration-600 group-hover:translate-x-8">
+                                <div class="absolute z-20 group-hover:z-40 w-[424px] left-20 top-1 leading-none transition-all duration-1000 group-hover:translate-x-8">
                                     <p class="text-white uppercase text-4xl font-medium">
                                         Hard Logistic
                                         <br>
@@ -95,7 +95,7 @@
                                         Vessel
                                     </h1>
                                 </div>
-                                <img src="/public/img-container-vessel.png" alt="" class="absolute z-30 right-18 -bottom-28 transition delay-150 duration-600 group-hover:translate-x-32 group-hover:translate-y-5 group-hover:rotate-5 soft-move">
+                                <img src="/public/img-container-vessel.png" alt="" class="absolute z-30 right-18 -bottom-28 transition duration-1000 group-hover:translate-x-32 group-hover:translate-y-5 group-hover:rotate-5 soft-move">
                             </div>
                             <div class="bg-[#1F1F1F]/50 w-full h-[360px]"></div>
                         </div>
