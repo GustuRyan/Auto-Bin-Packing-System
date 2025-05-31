@@ -21,7 +21,7 @@
                     </span>
                 </button>
             </div>
-            <div class="w-full overflow-hidden rounded-t-xl">
+            <div class="w-full overflow-hidden rounded-xl border-3 border-[#688FC1]">
                 <table class="min-w-full text-lg">
                     <thead class="font-semibold text-white bg-[#688FC1]">
                         <tr>
@@ -43,88 +43,122 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white">
-                        <tr class="border-t border-[#688FC1]">
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                        </tr>
-                        <tr class="border-t border-[#688FC1]">
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
                         </tr>
-                        <tr class="border-t border-[#688FC1]">
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                        </tr>
-                        <tr class="border-t border-[#688FC1]">
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
-                                a
-                            </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
                         </tr>
-                        <tr class="border-t border-[#688FC1]">
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
-                            <td class="border-2 border-[#688FC1] px-3 p-2">
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                        </tr>
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                        </tr>
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                        </tr>
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                        </tr>
+                        <tr class="border-t-3 border-[#688FC1]">
+                            <td class="border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-r-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-t-3 border-[#688FC1] px-3 p-2">
+                                a
+                            </td>
+                            <td class="border-l-3 border-[#688FC1] px-3 p-2">
                                 a
                             </td>
                         </tr>
