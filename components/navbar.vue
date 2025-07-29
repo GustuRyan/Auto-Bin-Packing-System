@@ -12,38 +12,62 @@
             <div v-on-click-outside="toggleOff" class="group space-y-5 transition-all ease-in-out delay-150 duration-500"
                 :class="toggle">
                 <NuxtLink :to="'/'" :class="homeToggle" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                    class="bg-[#356AAC] hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                    class="group/menu bg-[#356AAC] hover:bg-[#18314F] rounded-full flex justify-center items-center">
                     <img src="/public/icon-home.svg" alt="" class="w-6">
+                    <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Home
+                        </div>
                 </NuxtLink>
                 <div
                     class="w-14 h-full bg-gradient-to-b from-[#356AAC] to-[#18314F] rounded-full">
                     <NuxtLink :to="'/logistic'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full relative flex justify-center items-center">
                         <img src="/public/icon-products.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Logistic
+                        </div>
                     </NuxtLink>
                     <NuxtLink :to="'/schedule'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-schedule.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Schedule
+                        </div>
                     </NuxtLink>
                     <NuxtLink :to="'/transportation'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-transportation.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Transport
+                        </div>
                     </NuxtLink>
                     <NuxtLink :to="'/ai-model'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-ai.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            AiPacking
+                        </div>
                     </NuxtLink>
                     <NuxtLink :to="'/distribution'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-distribution.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Distribution
+                        </div>
                     </NuxtLink>
                     <NuxtLink :to="'/employee'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-user.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Employee
+                        </div>
                     </NuxtLink>
                     <NuxtLink :to="'/roles'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
+                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-roles.svg" alt="" class="w-6">
+                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
+                            Roles
+                        </div>
                     </NuxtLink>
                 </div>
             </div>
