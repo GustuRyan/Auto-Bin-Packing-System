@@ -85,10 +85,10 @@
                             </td>
                             <td class="border-t-3 border-[#77a3dd] px-3 p-2">
                                 <div class="flex items-center justify-center gap-2">
-                                    <button class="w-10 h-10 bg-amber-400 rounded-md flex justify-center items-center cursor-pointer">
+                                    <button class="w-10 h-10 bg-amber-400 rounded-md flex justify-center items-center cursor-pointer hover:bg-amber-500">
                                         <img src="/public/icon-edit.svg" class="size-6">
                                     </button>
-                                    <button class="w-10 h-10 bg-red-500 rounded-md flex justify-center items-center cursor-pointer">
+                                    <button class="w-10 h-10 bg-red-500 rounded-md flex justify-center items-center cursor-pointer hover:bg-red-600">
                                         <img src="/public/icon-delete.svg" class="size-6">
                                     </button>
                                 </div>
