@@ -11,12 +11,12 @@
                     Transportation List
                 </h2>
                 <div class="w-full h-0.5 bg-[#13273E]/25 rounded-full"></div>
-                <button class="flex items-center gap-2 rounded-2xl bg-[#13273E] text-white px-5 py-3 cursor-pointer hover:bg-[#18314fea]">
+                <NuxtLink :to="'transportation/create'" class="flex items-center gap-2 rounded-2xl bg-[#13273E] text-white px-5 py-3 cursor-pointer hover:bg-[#18314fea]">
                     <img src="/public/icon-plus.svg" alt="">
                     <span class="text-xl font-semibold w-28">
                         Add new
                     </span>
-                </button>
+                </NuxtLink>
             </div>
             <div class="w-full overflow-hidden rounded-xl border-3 border-[#77a3dd]">
                 <table class="min-w-full text-lg">
