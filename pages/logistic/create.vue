@@ -1,6 +1,6 @@
 <template>
     <div>
-        <AdminLayout :title="'logistics'">
+        <AdminLayout :title="'add new logistic'">
             <div class="w-full grid grid-cols-2 gap-5">
                 <div class="bg-white rounded-[20px] shadow-md w-full h-60">
 
