@@ -10,14 +10,13 @@
                             <div class="w-full flex justify-between item-center">
                                 <div class="rounded-full w-16 h-16 bg-[#18314F]"></div>
                                 <p class="text-[#18314F] text-3xl font-bold w-[360px] text-right">
-                                    Test one two three four five six
+                                    Seamless Destinations. Reliable Logistics.
                                 </p>
                             </div>
                             <div class="flex justify-between items-end h-full">
                                 <div class="flex flex-col justify-between h-full">
                                     <p class="text-[#18314F] text-2xl font-bold w-[360px]">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                        From exclusive island getaways to end-to-end transportation logistics, we connect people, places, and events with precision and comfort.
                                     </p>
                                     <div class="flex gap-3">
                                         <div class="w-14 h-6 rounded-[10px] bg-[#18314F]">
@@ -33,26 +32,18 @@
                         </div>
                         <div class="rounded-2xl p-7 bg-[#1F1F1F]/50 backdrop-blur-sm w-[70%] h-[300px]">
                             <p class="text-2xl font-bold text-white">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.
+                                We provide integrated travel and logistics solutions designed to support events, corporate trips, and premium destinations. Our services ensure efficiency, safety, and unforgettable experiences—every step of the journey.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="my-[300px] space-y-28">
-                    <h1 class="w-full text-center font-bold text-3xl uppercase">Lorem Ipsum Dolor Sit Amet</h1>
+                    <h1 class="w-full text-center font-bold text-3xl uppercase">Transportation Services</h1>
                     <div class="w-full flex justify-between">
                         <div class="space-y-4 w-[46%] pl-14">
-                            <h2 class="text-3xl font-bold">Lorem Ipsum</h2>
+                            <h2 class="text-3xl font-bold">Guest & Logistic Transportation</h2>
                             <p class="text-2xl font-medium text-[#7A7A7A]">
-                                Lorem Ipsum is simply dummy text of the
-                                printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages.
+                                Our air transportation services offer fast and secure mobility for guests, equipment, and essential logistics. Using reliable propeller aircraft, we ensure access to remote destinations while maintaining high safety and comfort standards—ideal for island travel, events, and urgent logistics.
                             </p>
                         </div>
                         <div class="relative w-[46%] flex items-center">
@@ -100,15 +91,9 @@
                             <div class="bg-[#1F1F1F]/50 w-full h-[360px]"></div>
                         </div>
                         <div class="space-y-4 w-[46%] pr-14 text-end">
-                            <h2 class="text-3xl font-bold">Lorem Ipsum</h2>
+                            <h2 class="text-3xl font-bold">Hard Logistic Transportation</h2>
                             <p class="text-2xl font-medium text-[#7A7A7A]">
-                                Lorem Ipsum is simply dummy text of the
-                                printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages.
+                                We provide dependable sea freight solutions using container vessels capable of handling large-scale logistics. From event equipment to commercial cargo, our maritime services guarantee secure handling, efficient routes, and on-time delivery across regional and international waters.
                             </p>
                         </div>
                     </div>
