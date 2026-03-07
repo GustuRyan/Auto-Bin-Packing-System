@@ -27,13 +27,6 @@
                             Logistic
                         </div>
                     </NuxtLink>
-                    <NuxtLink :to="'/schedule'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
-                        <img src="/public/icon-schedule.svg" alt="" class="w-6">
-                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
-                            Schedule
-                        </div>
-                    </NuxtLink>
                     <NuxtLink :to="'/transportation'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
                         class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
                         <img src="/public/icon-transportation.svg" alt="" class="w-6">
@@ -60,13 +53,6 @@
                         <img src="/public/icon-user.svg" alt="" class="w-6">
                         <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
                             Employee
-                        </div>
-                    </NuxtLink>
-                    <NuxtLink :to="'/roles'" :active-class="'bg-[#22446D] border-2 border-[#B4C6DD]'"
-                        class="group/menu size-14 hover:bg-[#18314F] rounded-full flex justify-center items-center">
-                        <img src="/public/icon-roles.svg" alt="" class="w-6">
-                        <div class="absolute left-16 bg-[#18314F] hidden group-hover/menu:flex p-2 text-white font-bold rounded-lg">
-                            Roles
                         </div>
                     </NuxtLink>
                 </div>
