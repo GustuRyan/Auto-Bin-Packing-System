@@ -31,3 +31,13 @@
     transform: translate(5px, -15px) rotate(1deg);
   }
 }
+
+@reference "tailwindcss";
+
+.input-style {
+    @apply w-full mt-2 border border-slate-100 p-2 rounded-lg bg-white;
+}
+
+.submit-btn {
+    @apply flex items-center py-2 px-8 font-bold bg-[#cbe1ff] hover:bg-[#9fc0f0] cursor-pointer rounded-full;
+}
