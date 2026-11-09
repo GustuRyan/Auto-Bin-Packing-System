@@ -8,6 +8,7 @@ import {
   PointElement
 } from 'chart.js'
 
+// Register only the Chart.js primitives required by this line chart.
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement)
 
 const props = defineProps<{
@@ -15,6 +16,7 @@ const props = defineProps<{
 }>()
 
 const chartData = computed(() => ({
+  // Use the array position as a simple prediction-step label.
   labels: props.data.map((_, i) => i + 1),
   datasets: [
     {

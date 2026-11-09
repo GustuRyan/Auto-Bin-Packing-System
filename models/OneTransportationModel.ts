@@ -1,3 +1,7 @@
+/**
+ * Single-transportation API type and generated runtime JSON validation helpers.
+ * Keep the interface and `typeMap` in sync when the backend schema changes.
+ */
 // To parse this data:
 //
 //   import { Convert, OneTransportationModel } from "./file";

@@ -1,4 +1,5 @@
 <template>
+  <!-- Reusable, horizontally scrollable table for the wide logistics dataset. -->
   <div class="w-full max-h-[800px] overflow-hidden rounded-xl border-3 border-[#77a3dd] overflow-x-scroll overflow-y-scroll">
     <table class="w-full text-lg">
       <thead class="font-semibold text-white bg-[#688FC1] w-full sticky top-0 z-10">
@@ -46,6 +47,7 @@ import { Convert, type LogisticModel } from '~/models/LogisticModel';
 const { $api } = useNuxtApp()
 const logistics = ref<LogisticModel[]>([]);
 
+// Load and runtime-validate the logistics response before rendering it.
 async function loadLogistics() {
     const response = await $api.get('/logistics')
     logistics.value = Convert.toLogisticModel(JSON.stringify(response.data));
@@ -68,6 +70,7 @@ onMounted(() => {
 })
 
 const columnHelper = createColumnHelper<LogisticModel>();
+// Column groups mirror the identification, physical, date, shipping, and cost fields.
 const columns = [
     // 1. Row Number (Display Column)
     columnHelper.display({
@@ -121,7 +124,7 @@ const props = defineProps<{
   paginate: number
 }>()
 
-// --- PAGINATION STATE MANAGEMENT ---
+// Keep the internal page size synchronized with the parent page's requested limit.
 const pageSize = ref(props.paginate)
 
 watch(() => props.paginate, (val) => {
@@ -135,17 +138,17 @@ const paginationState = computed<PaginationState>(() => ({
     pageIndex: pageIndex.value,
 }));
 
-// Manually calculate page count based on reactive data length
+// Calculate the client-side page count from the current API data.
 const pageCount = computed(() => Math.ceil(logistics.value.length / pageSize.value));
 
-// Function to update pagination state when the table requests a change
+// Apply pagination changes requested by TanStack Table.
 const setPagination = (updater: ((prevState: PaginationState) => PaginationState) | PaginationState) => {
     const newState = typeof updater === 'function' ? updater(paginationState.value) : updater;
     pageIndex.value = newState.pageIndex;
     pageSize.value = newState.pageSize;
 };
 
-// --- TANSTACK TABLE CONFIGURATION (The fix is here) ---
+// Getters let TanStack read Vue's latest reactive data and pagination state.
 const table = useVueTable({
     get data() { return logistics.value },
     columns,

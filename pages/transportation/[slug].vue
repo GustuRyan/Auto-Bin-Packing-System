@@ -1,4 +1,5 @@
 <template>
+    <!-- Edit form populated from the transportation ID in the dynamic route. -->
     <div>
         <AdminLayout :title="'edit transportation'">
             <form @submit.prevent="submitForm" class="w-full flex gap-8 text-lg h-[600px]">
@@ -78,6 +79,7 @@ const form = ref({
 })
 
 async function submitForm() {
+    // Send the complete form because the backend update endpoint expects all fields.
     try {
         const payload = {
             ...form.value,
@@ -95,6 +97,7 @@ async function submitForm() {
 }
 
 async function loadTransportation() {
+    // Validate the response before copying it into editable form state.
     const response = await $api.get('/transportation/' + slug)
     const data = Convert.toOneTransportationModel(JSON.stringify(response.data))
 

@@ -1,3 +1,4 @@
+/** Current authenticated user returned by the account API. */
 export interface UserModel {
     id:    number;
     name:  string;

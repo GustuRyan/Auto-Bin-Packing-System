@@ -1,4 +1,5 @@
 <template>
+    <!-- Placeholder for a future manual distribution-creation form. -->
     <div>
         <AdminLayout :title="'add new distribution'">
             

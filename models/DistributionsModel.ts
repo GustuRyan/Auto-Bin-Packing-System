@@ -1,3 +1,7 @@
+/**
+ * Distribution API types, nested records, and generated JSON validators.
+ * Keep the interfaces and `typeMap` in sync when the backend schema changes.
+ */
 // To parse this data:
 //
 //   import { Convert } from "./file";

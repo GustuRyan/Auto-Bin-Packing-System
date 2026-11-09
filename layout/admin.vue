@@ -1,4 +1,5 @@
 <template>
+    <!-- Admin shell: background decoration, navigation, page heading, and content slot. -->
     <div class="overflow-hidden bg-[#F7F7F7] relative w-full min-h-screen h-full p-12 flex justify-center">
         <div class="absolute w-full max-w-[1400px] h-full">
             <Navbar />
@@ -33,6 +34,7 @@ import Navbar from '~/components/navbar.vue';
 
 const route = useRoute()
 const status = ref('')
+// The AI page uses a more specific section label than regular admin pages.
 status.value = route.fullPath == '/ai-model' ? 'ai model' : 'admin'
 
 defineProps({

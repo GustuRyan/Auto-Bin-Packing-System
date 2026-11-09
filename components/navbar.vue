@@ -1,4 +1,5 @@
 <template>
+    <!-- Collapsible side navigation shared by the public and admin layouts. -->
     <div class="absolute z-50 transition delay-150 duration-300" :class="position">
         <div class="fixed h-screen flex items-center pb-24">
             <div @click="toggleOn" :class="menuToggle"
@@ -71,6 +72,7 @@ const homeToggle = ref('size-14')
 const menuArrow = ref('w-0')
 const toggle = ref('')
 
+// The home page can collapse the menu; inner pages keep it visible.
 var toggleOff = () => {}
 
 const toggleOn = () => {

@@ -1,4 +1,5 @@
 <template>
+    <!-- Placeholder roles page; role management UI has not been implemented yet. -->
     <div>
         <AdminLayout :title="'roles'">
             <button @click="logout" class="submit-btn">

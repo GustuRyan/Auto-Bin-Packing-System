@@ -1,4 +1,5 @@
 <template>
+    <!-- Transportation CRUD list with client-side TanStack pagination. -->
     <div>
         <AdminLayout :title="'transportation'">
             <div class="w-full grid grid-cols-3 gap-5">
@@ -70,6 +71,7 @@ const { $api } = useNuxtApp()
 const transportations = ref<TransportationsModel[]>([]);
 
 async function loadTransportations() {
+    // Validate the API array before exposing it to the table.
     const response =  await $api.get('/transportation')
     transportations.value = Convert.toTransportationsModel(JSON.stringify(response.data));
 }
@@ -91,6 +93,7 @@ onMounted(() => {
 })
 
 const columnHelper = createColumnHelper<TransportationsModel>();
+// Define the visible container identity, dimensions, and capacity columns.
 const columns = [
     // 1. Row Number (Display Column)
     columnHelper.display({
@@ -110,7 +113,7 @@ const columns = [
 ] as ColumnDef<TransportationsModel, unknown>[];
 
 
-// --- PAGINATION STATE MANAGEMENT ---
+// Client-side pagination state shared with TanStack Table.
 const pageSize = ref(10);
 const pageIndex = ref(0);
 
@@ -119,17 +122,17 @@ const paginationState = computed<PaginationState>(() => ({
     pageIndex: pageIndex.value,
 }));
 
-// Manually calculate page count based on reactive data length
+// Calculate page count from the latest transportation data.
 const pageCount = computed(() => Math.ceil(transportations.value.length / pageSize.value));
 
-// Function to update pagination state when the table requests a change
+// Apply page changes requested by the table controls.
 const setPagination = (updater: ((prevState: PaginationState) => PaginationState) | PaginationState) => {
     const newState = typeof updater === 'function' ? updater(paginationState.value) : updater;
     pageIndex.value = newState.pageIndex;
     pageSize.value = newState.pageSize;
 };
 
-// --- TANSTACK TABLE CONFIGURATION (The fix is here) ---
+// Reactive getters ensure the table always sees current Vue state.
 const table = useVueTable({
     get data() { return transportations.value },
     columns,

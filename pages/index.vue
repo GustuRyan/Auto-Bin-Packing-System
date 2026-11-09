@@ -1,4 +1,5 @@
 <template>
+    <!-- Public landing page describing the available transport services. -->
     <div>
         <MainLayout>
             <div class="relative">

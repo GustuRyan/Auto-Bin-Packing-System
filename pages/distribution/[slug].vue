@@ -1,4 +1,5 @@
 <template>
+    <!-- Placeholder for a future distribution-edit form. -->
     <div>
         <AdminLayout :title="'edit distribution'">
             

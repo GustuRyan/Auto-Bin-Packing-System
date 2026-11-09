@@ -1,4 +1,5 @@
 <template>
+    <!-- Public-facing shell used by the landing and login pages. -->
     <div class="overflow-hidden bg-[#F7F7F7] relative w-full min-h-screen h-full p-12 flex justify-center">
         <div class="absolute w-full max-w-[1400px] h-full">
             <Navbar />

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Landing-page artwork animates only while its parent card is hovered. */
 .group:hover .soft-bounce {
   animation: softBounce 5.0s ease-in-out infinite;
 }
@@ -34,6 +35,7 @@
 
 @reference "tailwindcss";
 
+/* Shared form controls used by create, edit, login, and profile screens. */
 .input-style {
     @apply w-full mt-2 border border-slate-100 p-2 rounded-lg bg-white;
 }

@@ -1,4 +1,5 @@
 <template>
+    <!-- Edit form populated from the logistics ID in the dynamic route. -->
     <div>
         <AdminLayout :title="'edit logistic detail'">
             <form class="w-full flex gap-8 text-lg" @submit.prevent="submitForm">
@@ -197,7 +198,7 @@ const route = useRoute()
 const slug = route.params.slug
 const { $api } = useNuxtApp()
 
-// FORM
+// The form shape matches the create screen and API payload.
 const form = ref({
     logistic_name: "",
     logistic_id: "",
@@ -238,6 +239,7 @@ const form = ref({
 })
 
 async function submitForm() {
+    // Convert local datetime inputs back to API-safe timestamps.
     try {
         const payload = {
             ...form.value,
@@ -260,6 +262,7 @@ function toRFC3339(dt: string) {
 }
 
 function formatToDatetimeLocal(value: string | number | Date) {
+    // datetime-local inputs require YYYY-MM-DDTHH:mm without a timezone suffix.
     if (!value) return "";
     const date = new Date(value);
 
@@ -274,6 +277,7 @@ function formatToDatetimeLocal(value: string | number | Date) {
 
 
 async function loadLogistics() {
+    // Runtime validation catches backend response-shape changes early.
     const response = await $api.get('/logistics/' + slug)
     const data = Convert.toOneLogisticModel(JSON.stringify(response.data))
 

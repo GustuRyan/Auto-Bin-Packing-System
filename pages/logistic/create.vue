@@ -1,4 +1,5 @@
 <template>
+    <!-- Form for creating a logistics record with packing and shipping attributes. -->
     <div>
         <AdminLayout :title="'add new logistic'">
             <form @submit.prevent="submitForm" class="w-full flex gap-8 text-lg">
@@ -178,7 +179,7 @@ import { ref } from "vue"
 import AdminLayout from '~/layout/admin.vue'
 const { $api } = useNuxtApp()
 
-// FORM OBJECT
+// A single reactive object maps directly to the backend logistics payload.
 const form = ref({
     logistic_name: "",
     logistic_id: "",
@@ -218,7 +219,7 @@ const form = ref({
     biaya_transport_idr: ""
 })
 
-/* SUBMIT */
+// Convert browser-local datetime values before sending them to the API.
 async function submitForm() {
     try {
 
@@ -240,6 +241,7 @@ async function submitForm() {
 }
 
 function toRFC3339(dt: string) {
+    // The API expects timezone-aware RFC 3339/ISO timestamps.
     if (!dt) return "";
     return new Date(dt).toISOString();
 }

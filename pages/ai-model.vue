@@ -1,4 +1,5 @@
 <template>
+    <!-- Complete AI workflow: choose data, run prediction, inspect metrics, and save placements. -->
     <div>
         <AdminLayout :title="'bin packing and schedule optimization'">
             <div class="w-full h-[50vh] flex justify-between gap-12">
@@ -273,9 +274,11 @@ type PredictResponse = {
     placements: any[]
 }
 
+// Prediction output displayed in the metrics and placement table.
 const placement = ref<Placement | null>(null);
 const placements = ref<Placement[]>([]);
 
+// Upload and panel state used by the interactive controls.
 const dropZoneActive = ref(false)
 const isLoading = ref(false)
 const fileInput = ref<HTMLInputElement | null>(null)
@@ -326,7 +329,7 @@ const handleDragLeave = (event: DragEvent) => {
 
 const uploadedRows = ref<any[]>([])
 
-
+// Normalize CSV strings into the types expected by the logistics API.
 function convertRowToLogistic(row: Record<string, string>): LogisticModel {
     const toFloat = (v: string | null | undefined): number | null =>
         v === "" || v == null ? null : parseFloat(v)
@@ -403,6 +406,7 @@ function convertRowToLogistic(row: Record<string, string>): LogisticModel {
 
 let rows: LogisticModel[]
 
+// Papa Parse reads the header row and returns one object per non-empty CSV row.
 const parseCSV = (file: File) => {
     Papa.parse(file, {
         header: true,
@@ -419,6 +423,7 @@ const parseCSV = (file: File) => {
 }
 
 async function submitCSV() {
+    // Insert uploaded records sequentially to avoid overwhelming the backend.
     try {
         isLoading.value = true
         for (const row of rows) {
@@ -432,6 +437,7 @@ async function submitCSV() {
 }
 
 async function generateCSVFromAPI() {
+    // Build an in-memory CSV so existing logistics can use the same prediction path.
     const res = await $api.get('/logistics')
 
     const data: LogisticModel[] = res.data
@@ -468,6 +474,7 @@ const sendToPredict = async () => {
         return;
     }
 
+    // The prediction endpoint accepts the selected CSV as multipart form data.
     const form = new FormData();
     form.append("file", selectedFile.value);
 
@@ -508,6 +515,7 @@ async function loadLogistics() {
 }
 
 const getIDByBarcode = (barcode: string) => {
+    // Prediction items use barcodes, while distribution records require database IDs.
     console.log("MENCARI BARCODE:", barcode)
 
     const data = logistics.value.find(item => String(item.barcode) === String(barcode))
@@ -531,6 +539,7 @@ const form = ref({
 })
 
 const uploadDistributions = async () => {
+    // Load the latest records before mapping each predicted placement to its item ID.
     await loadLogistics()
 
     try {
@@ -556,6 +565,7 @@ const uploadDistributions = async () => {
 }
 
 const tableHeaders: (keyof Placement | "num")[] = [
+    // This order controls the prediction-result table's visible columns.
     "num",
     "bin",
     "bin_index",

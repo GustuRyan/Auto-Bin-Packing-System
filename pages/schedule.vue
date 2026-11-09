@@ -1,4 +1,5 @@
 <template>
+    <!-- Placeholder schedule table using sample rows until an API is connected. -->
     <div>
         <AdminLayout :title="'schedules'">
             <div class="w-full grid grid-cols-4 gap-5">

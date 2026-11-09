@@ -1,3 +1,4 @@
+/** One item placement returned by the bin-packing prediction endpoint. */
 export interface Placement {
     bin: string
     bin_index: number

@@ -1,4 +1,5 @@
 <template>
+    <!-- Current-user profile form and session logout controls. -->
     <div>
         <AdminLayout :title="'User Profile'">
 
@@ -51,6 +52,7 @@ const user = ref({
 
 const loading = ref(true)
 
+// Hydrate the local form from the authenticated-user endpoint.
 const loadUser = async () => {
   try {
     const res = await $api.get('/me')
@@ -74,6 +76,7 @@ const loadUser = async () => {
 }
 
 const updateUser = async () => {
+  // Role is intentionally excluded so users cannot promote themselves here.
   try {
     await $api.put('/me', {
       name: user.value.name,
@@ -88,6 +91,7 @@ const updateUser = async () => {
 }
 
 const logout = async () => {
+    // Always leave the protected area, even if the backend logout call fails.
     try {
         await $api.post('/logout')
     } finally {

@@ -1,4 +1,5 @@
 <template>
+    <!-- Form for registering a transportation container and its capacity. -->
     <div>
         <AdminLayout :title="'add new transportation'">
             <form @submit.prevent="submitForm" class="w-full flex gap-8 text-lg h-[600px]">
@@ -65,6 +66,7 @@ import AdminLayout from '~/layout/admin.vue';
 const { $api } = useNuxtApp()
 
 const form = ref({
+    // Field names intentionally match the backend transportation schema.
     transportation_id: "",
     transport_name: "",
     transport_type: "",

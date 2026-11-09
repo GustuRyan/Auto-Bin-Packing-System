@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  // Scan every location that can contain Tailwind utility classes.
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -10,6 +11,7 @@ export default {
   ],
   theme: {
     extend: {
+      // Shared typography and brand colors used by the dashboard UI.
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],

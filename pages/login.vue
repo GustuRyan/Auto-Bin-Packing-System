@@ -1,4 +1,5 @@
 <template>
+    <!-- Public sign-in form; successful authentication redirects to the dashboard. -->
     <div>
         <MainLayout>
             <div class="flex">
@@ -40,6 +41,7 @@ const form = ref({
 })
 
 async function submitForm() {
+  // The backend creates the session cookie used by the global route middleware.
   await $api.post('/login', form.value)
 
   navigateTo('/')

@@ -1,4 +1,5 @@
 <template>
+    <!-- Logistics overview delegates data loading and table behavior to LogisticTable. -->
     <div>
         <AdminLayout :title="'logistics'">
             <div class="w-full grid grid-cols-2 gap-5">

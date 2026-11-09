@@ -1,4 +1,5 @@
 <template>
+    <!-- Read-only view of AI placements joined with logistics and transportation data. -->
     <div>
         <AdminLayout :title="'distributions'">
             <div class="w-full grid grid-cols-2 gap-5">
@@ -74,6 +75,7 @@ const { $api } = useNuxtApp()
 const distributions = ref<DistributionsModel[]>([]);
 
 async function loadDistributions() {
+    // Validate nested logistics/transportation records before table rendering.
     const response = await $api.get('/distributions')
     distributions.value = Convert.toDistributionsModel(JSON.stringify(response.data));
 }
@@ -83,6 +85,7 @@ onMounted(() => {
 })
 
 const columnHelper = createColumnHelper<DistributionsModel>();
+// Nested accessors display both placement coordinates and item/container details.
 const columns = [
     // 1. Row Number (Display Column)
     columnHelper.display({
@@ -107,7 +110,7 @@ const columns = [
 ] as ColumnDef<DistributionsModel, unknown>[];
 
 
-// --- PAGINATION STATE MANAGEMENT ---
+// Client-side pagination state shared with TanStack Table.
 const pageSize = ref(10);
 const pageIndex = ref(0);
 
@@ -116,17 +119,17 @@ const paginationState = computed<PaginationState>(() => ({
     pageIndex: pageIndex.value,
 }));
 
-// Manually calculate page count based on reactive data length
+// Calculate page count from the latest distribution records.
 const pageCount = computed(() => Math.ceil(distributions.value.length / pageSize.value));
 
-// Function to update pagination state when the table requests a change
+// Apply page changes requested by the table controls.
 const setPagination = (updater: ((prevState: PaginationState) => PaginationState) | PaginationState) => {
     const newState = typeof updater === 'function' ? updater(paginationState.value) : updater;
     pageIndex.value = newState.pageIndex;
     pageSize.value = newState.pageSize;
 };
 
-// --- TANSTACK TABLE CONFIGURATION (The fix is here) ---
+// Reactive getters ensure the table always sees current Vue state.
 const table = useVueTable({
     get data() { return distributions.value },
     columns,
